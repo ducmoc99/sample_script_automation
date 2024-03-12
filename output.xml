@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-03-12T20:25:50.265084" rpa="false" schemaversion="5">
+<suite id="s1" name="Abc" source="E:\PycharmProjects\pythonProject\abc.robot">
+<test id="s1-t1" name="Example Test" line="17">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-03-12T20:25:50.289472" level="INFO">${item} = ['header', 'body']</msg>
+<var>${item}</var>
+<arg>${headers}</arg>
+<arg>${body}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-03-12T20:25:50.288449" elapsed="0.001023"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-03-12T20:25:50.289472" level="INFO">${values} = ['value_for_headers', 'value_for_body']</msg>
+<var>${values}</var>
+<arg>value_for_headers</arg>
+<arg>value_for_body</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-03-12T20:25:50.289472" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variables">
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2024-03-12T20:25:50.290469" level="INFO">Length is 2.</msg>
+<msg time="2024-03-12T20:25:50.290469" level="INFO">${count} = 2</msg>
+<var>${count}</var>
+<arg>${values}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2024-03-12T20:25:50.290469" elapsed="0.000000"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<for flavor="IN">
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-03-12T20:25:50.290469" elapsed="0.000996"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-03-12T20:25:50.291465" level="INFO">${i} = value_for_headers</msg>
+<arg>${i}</arg>
+<arg>${values[${index}]}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-03-12T20:25:50.291465" elapsed="0.000000"/>
+</kw>
+<var name="${i}">header</var>
+<status status="PASS" start="2024-03-12T20:25:50.290469" elapsed="0.000996"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-03-12T20:25:50.292436" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-03-12T20:25:50.292436" level="INFO">${i} = value_for_headers</msg>
+<arg>${i}</arg>
+<arg>${values[${index}]}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-03-12T20:25:50.292436" elapsed="0.000000"/>
+</kw>
+<var name="${i}">body</var>
+<status status="PASS" start="2024-03-12T20:25:50.292436" elapsed="0.000000"/>
+</iter>
+<var>${i}</var>
+<value>@{item}</value>
+<status status="PASS" start="2024-03-12T20:25:50.290469" elapsed="0.002964"/>
+</for>
+<var name="${index}">0</var>
+<status status="PASS" start="2024-03-12T20:25:50.290469" elapsed="0.002964"/>
+</iter>
+<iter>
+<for flavor="IN">
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-03-12T20:25:50.293433" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-03-12T20:25:50.294430" level="INFO">${i} = value_for_body</msg>
+<arg>${i}</arg>
+<arg>${values[${index}]}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-03-12T20:25:50.293433" elapsed="0.000997"/>
+</kw>
+<var name="${i}">header</var>
+<status status="PASS" start="2024-03-12T20:25:50.293433" elapsed="0.000997"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-03-12T20:25:50.294430" elapsed="0.000000"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-03-12T20:25:50.295428" level="INFO">${i} = value_for_body</msg>
+<arg>${i}</arg>
+<arg>${values[${index}]}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-03-12T20:25:50.294430" elapsed="0.000998"/>
+</kw>
+<var name="${i}">body</var>
+<status status="PASS" start="2024-03-12T20:25:50.294430" elapsed="0.000998"/>
+</iter>
+<var>${i}</var>
+<value>@{item}</value>
+<status status="PASS" start="2024-03-12T20:25:50.293433" elapsed="0.001995"/>
+</for>
+<var name="${index}">1</var>
+<status status="PASS" start="2024-03-12T20:25:50.293433" elapsed="0.001995"/>
+</iter>
+<var>${index}</var>
+<value>${count}</value>
+<status status="PASS" start="2024-03-12T20:25:50.290469" elapsed="0.004959"/>
+</for>
+<arg>${item}</arg>
+<arg>${values}</arg>
+<status status="PASS" start="2024-03-12T20:25:50.290469" elapsed="0.004959"/>
+</kw>
+<kw name="create">
+<msg time="2024-03-12T20:25:50.296425" level="FAIL">No keyword with name 'create' found. Did you mean:
+    BuiltIn.Create List</msg>
+<status status="FAIL" start="2024-03-12T20:25:50.296425" elapsed="0.000000">No keyword with name 'create' found. Did you mean:
+    BuiltIn.Create List</status>
+</kw>
+<status status="FAIL" start="2024-03-12T20:25:50.288449" elapsed="0.007976">No keyword with name 'create' found. Did you mean:
+    BuiltIn.Create List</status>
+</test>
+<status status="FAIL" start="2024-03-12T20:25:50.267079" elapsed="0.031340"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Abc">Abc</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
