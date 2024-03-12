@@ -70,6 +70,7 @@ Signing With Email By Data
     Common - Input Element    ${inp_signin_form_email}    ${data_username}
     Common - Input Element    ${inp_signin_form_password}    ${data_password}
     Common - Click Element    ${btn_signin}
+    sleep       5s
     hide keyboard
     Common - Press Back Button
 
@@ -79,6 +80,7 @@ Add Task
     Common - Input Element    ${inp_task_name}    Day som doc sach
     Common - Click Element    ${btn_choose_schedule}
     Set Due Date
+    sleep       2s
     Common - Click Element    ${btn_submit_task}
     Common - Press Back Button
 
