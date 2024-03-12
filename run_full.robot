@@ -40,7 +40,7 @@ TC2-Mark_Done_Task
     Common - Click Element    ${btn_inbox_page}
     sleep    1s
     WAIT UNTIL ELEMENT IS VISIBLE    ${label_tab_inbox}    ${var_timeout_30s}
-    Mark Done Task    Choi bong ban
+    Mark Done Task    Day som doc sach
 
 
 *** Keywords ***
@@ -62,6 +62,7 @@ Open App Todoist
     ...    appium:appPackage=com.todoist
     ...    appium:appActivity=com.todoist.alias.HomeActivityDefault    appium:automationName=UiAutomator2
     ...    appium:noReset=false    appium:allowPermission=true
+    sleep       5s
 
 Signing With Email By Data
     [Arguments]    ${data_username}    ${data_password}
@@ -72,8 +73,6 @@ Signing With Email By Data
     Common - Click Element    ${btn_signin}
     sleep       5s
     hide keyboard
-    log to console      xin chao
-    log to console      xin chao
 Add Task
     Common - Click Element    ${btn_inbox_page}
     Common - Click Element    ${btn_quick_add}
