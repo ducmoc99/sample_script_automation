@@ -72,7 +72,6 @@ Signing With Email By Data
     Common - Click Element    ${btn_signin}
     sleep       5s
     hide keyboard
-    Common - Press Back Button
 Add Task
     Common - Click Element    ${btn_inbox_page}
     Common - Click Element    ${btn_quick_add}
